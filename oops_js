@@ -1,0 +1,36 @@
+// Question 1 — Understanding this in an
+// Object
+// const user = {
+// name:"Ritik",
+// greet() {
+// console.log(this.name);
+// }
+// };
+// What will be printed when:
+// user.greet();
+
+// Scenario
+// A profile page wants to display the logged-in user's name.
+// What is this question asking?
+// You need to identify what this refers to.
+// Remember:
+// "Dot ke left mein jo object hai, wahi this hai."
+// Here:
+// user.greet()
+
+
+
+// means:
+// this===user
+
+// Concepts Tested
+// this keyword
+// Method calls
+
+const user = {
+   name:"Ritik",
+    greet() {
+console.log(this.name);
+}
+};
+user.greet()
