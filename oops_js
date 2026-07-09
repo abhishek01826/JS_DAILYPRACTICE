@@ -30,7 +30,7 @@
 const user = {
    name:"Ritik",
     greet() {
-console.log(this.name);
+//console.log(this.name);
 }
 };
 user.greet()
@@ -61,7 +61,7 @@ user.greet()
 // Strict Mode
 "use strict"
  function show() {
-console.log(this);
+//console.log(this);
 }
 show();
 
@@ -84,9 +84,98 @@ show();
 // call()
 
 function introduce() {
-console.log(this.name);
+//console.log(this.name);
 }
 const person= {
 name:"Ritik"
 };
-introduce.call(person)
+// introduce.call(person)
+
+// Question 4 — apply()
+// function introduce(city,country) {
+// console.log(`${this.name} from${city}`);
+// }
+// const person= {
+// name:"Ritik"
+// };
+// Call the function using apply() .
+// Scenario
+// Arguments are coming inside an array from an API.
+// What is this question asking?
+// Use apply instead of call.
+// Concepts Tested
+// apply()
+// Explicit Binding
+
+function introduce(city,country) {
+console.log(`${this.name} from ${city} ${country}`);
+}
+const Person= {
+name:"Ritik"
+};
+introduce.apply(Person,['bareilly','india'])
+
+// 🟡 Moderate Level (Q5 - Q7)
+
+// Question 5 — Fix Lost this
+// const user= {
+// name:"Ritik",
+// greet() {
+// console.log(this.name);
+// }
+// };
+
+
+// const fn=user.greet;
+// fn();
+// The code prints:
+// undefined
+
+// Fix it using bind() .
+// Scenario
+// A method was passed as a callback and lost its object reference.
+// What is this question asking?
+// Understand why this gets lost and how bind permanently fixes it.
+// Concepts Tested
+// bind()
+// this
+// Callback Problems
+
+const User= {
+name:"Ritik",
+greet() {
+console.log(this.name);
+}
+};
+const fn = User.greet.bind(User);
+fn();
+
+// Question 6 — Create an Inheritance Chain
+// Create:
+// const animal= {
+// eats:true
+// };
+// Then create:
+
+
+// const dog
+// using Object.create() .
+// The dog object should inherit:
+// eats
+
+// from animal.
+
+// Scenario
+// You are building a game where many animals share common behaviors.
+// What is this question asking?
+// Create an object whose prototype is another object.
+// Concepts Tested
+// Object.create()
+// Prototype Chain
+
+
+const animal= {
+eats:true
+};
+const dog = Object.create(animal)
+console.log(dog.eats);
