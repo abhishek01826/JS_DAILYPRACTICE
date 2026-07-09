@@ -34,3 +34,33 @@ console.log(this.name);
 }
 };
 user.greet()
+
+
+// Question 2 — Default Binding
+// function show() {
+// console.log(this);
+// }
+// show();
+// What will be printed?
+// Also explain the difference between:
+// Browser
+// Node.js
+// Strict Mode
+
+// Scenario
+// You copied code from a browser project into Node.js and got different results.
+// What is this question asking?
+// Understand what happens when a regular function is called without an object.
+// Concepts Tested
+
+// OOPs Practice Questions 2
+
+
+// this
+// Default Binding
+// Strict Mode
+"use strict"
+ function show() {
+console.log(this);
+}
+show();
