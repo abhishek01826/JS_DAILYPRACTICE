@@ -179,3 +179,34 @@ eats:true
 };
 const dog = Object.create(animal)
 console.log(dog.eats);
+
+
+// Question 7 — Prototype Method
+// Create:
+// function Person(name) {
+// this.name=name;
+// }
+// Add:
+// greet()
+// using:
+// Person.prototype
+// so every person object can use it.
+// Scenario
+// Thousands of users need the same method.
+// You don't want a separate copy for every user.
+// What is this question asking?
+// Store methods inside the prototype instead of the object itself.
+// Concepts Tested
+// Constructor Functions
+// Prototype
+// Memory Optimization
+
+function Personn(name) {
+this.name=name;
+}
+Personn.prototype.greet = function(name) {
+    console.log(`hello bde bhai ${this.name}`);
+    
+}
+const person1 = new Personn("anurag")
+person1.greet()
