@@ -124,7 +124,7 @@ const timerId = setInterval(() => {
 
 
 function fetchUser(callback) {
-    console.log("Fetching user...");
+    //console.log("Fetching user...");
 setTimeout(() => {
     let user = {
         id: 1,
@@ -134,5 +134,58 @@ setTimeout(() => {
 },2000);
 }
 fetchUser((user) => {
-    console.log(user);
+    //console.log(user);
     });
+
+//     🔴 Hard Level (Q9 - Q12)
+
+// Question 9 — Promise Chaining
+// Create:
+// addTen(num)
+// which returns a Promise.
+// Starting from:
+// 0
+
+// perform:
+// +10
+// +10
+// +10
+
+// using Promise chaining.
+// Expected Output
+// 10
+// 20
+
+// Phase 5 Practice Questions 7
+
+// 30
+
+// Scenario
+// Processing data through multiple stages.
+// What is this question asking?
+// Understand how .then() chains work.
+
+// Concepts Tested
+// Promise Chaining
+// then()
+
+function addTen(num) {
+    return new Promise((resolve, reject) => {
+        resolve(num + 10);
+    });
+}
+
+// Starting from 0
+addTen(0)
+    .then(result => {
+        console.log(result); // 10
+        return addTen(result);
+    })
+    .then(result => {
+        console.log(result); // 20
+        return addTen(result);
+    })
+    .then(result => {
+        console.log(result); // 30
+    })
+    .catch(err => console.log(err));
