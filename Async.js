@@ -178,14 +178,51 @@ function addTen(num) {
 // Starting from 0
 addTen(0)
     .then(result => {
-        console.log(result); // 10
+        //console.log(result); // 10
         return addTen(result);
     })
     .then(result => {
-        console.log(result); // 20
+        //console.log(result); // 20
         return addTen(result);
     })
     .then(result => {
-        console.log(result); // 30
+        //console.log(result); // 30
     })
     .catch(err => console.log(err));
+
+    // Question 5 (Moderate) — Print User Information
+
+// letuser= {
+// name:"Ritik",
+// age:20,
+// city:"Bhopal"
+// };
+
+// Print:
+// Name:Ritik
+// Age:20
+// City:Bhopal
+// using a loop.
+// What is this question asking?
+// Instead of manually writing:
+// console.log(user.name);
+// console.log(user.age);
+// Loop through the object dynamically.
+// Concepts Tested
+// Objects
+// Object.entries()
+// for...of
+
+
+
+
+let userrr = {
+    name: "Ritik",
+    age: 20,
+    city: "Bhopal"
+};
+
+for (const [key, value] of Object.entries(userrr)) {
+    console.log(key, value);
+}
+
