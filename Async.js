@@ -216,7 +216,7 @@ addTen(0)
 
 
 
-let userrr = {
+let userrrr = {
     name: "Ritik",
     age: 20,
     city: "Bhopal"
@@ -225,4 +225,6 @@ let userrr = {
 for (const [key, value] of Object.entries(userrr)) {
     console.log(key, value);
 }
+
+
 
