@@ -214,8 +214,6 @@ addTen(0)
 // for...of
 
 
-
-
 let userrrr = {
     name: "Ritik",
     age: 20,

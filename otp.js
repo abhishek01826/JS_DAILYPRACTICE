@@ -1,4 +1,4 @@
-function generateOTP() {
+function generaateOTP() {
     let otp = "";
 
     for (let i = 0; i < 6; i++) {
@@ -8,5 +8,5 @@ function generateOTP() {
     return otp;
 }
 
-const otp = generateOTP();
+const otp = generaateOTP();
 console.log(otp);
